@@ -17,8 +17,6 @@ namespace Foreman
         public frmMain()
         {
             InitializeComponent();
-
-            OpenProcfile(@"Y:\foreman\data\example\Procfile");
         }
 
         private void openProcfileToolStripMenuItem_Click(object sender, EventArgs e)

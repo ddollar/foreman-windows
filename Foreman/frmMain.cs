@@ -72,7 +72,7 @@ namespace Foreman
 
         private string ColorTable()
         {
-            return (@"{\colortbl;\red0\green204\blue204;\red255\green255\blue0;}");
+            return (@"{\colortbl;\red0\green204\blue204;\red255\green255\blue0;\red0\green204\blue0;\red204\green0\blue204;\red204\green0\blue0;}");
         }
     }
 }

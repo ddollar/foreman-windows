@@ -70,7 +70,7 @@ def tempdir
 end
 
 def version
-  "0.0.2"
+  "0.1.0"
 end
 
 Dir[File.expand_path("../dist/**/*.rake", __FILE__)].each do |rake|

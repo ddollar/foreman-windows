@@ -1,12 +1,16 @@
 require "bundler/setup"
+require "albacore"
 
 EXECUTABLE = File.expand_path("../Foreman/bin/Release/Foreman.exe", __FILE__)
 
-require "rake"
-require "rspec"
-require "rspec/core/rake_task"
+desc "Build"
+msbuild :build do |msb|
+  msb.properties :configuration => :Release
+  msb.targets :Clean, :Build
+  msb.solution = "Foreman.sln"
+end
 
-task :default => :spec
+task :default => :build
 
 ## dist
 

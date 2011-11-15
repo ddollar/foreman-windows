@@ -1,8 +1,16 @@
 require "bundler/setup"
+require "albacore"
 
 EXECUTABLE = File.expand_path("../Foreman/bin/Release/Foreman.exe", __FILE__)
 
-task :default => :spec
+desc "Build"
+msbuild :build do |msb|
+  msb.properties :configuration => :Release
+  msb.targets :Clean, :Build
+  msb.solution = "Foreman.sln"
+end
+
+task :default => :build
 
 ## dist
 

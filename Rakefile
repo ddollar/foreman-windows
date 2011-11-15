@@ -2,6 +2,10 @@ require "bundler/setup"
 
 EXECUTABLE = File.expand_path("../Foreman/bin/Release/Foreman.exe", __FILE__)
 
+require "rake"
+require "rspec"
+require "rspec/core/rake_task"
+
 task :default => :spec
 
 ## dist

@@ -74,5 +74,16 @@ namespace Foreman
         {
             return (@"{\colortbl;\red0\green204\blue204;\red255\green255\blue0;\red0\green204\blue0;\red204\green0\blue204;\red204\green0\blue0;}");
         }
+
+        private void stopStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_objProcfile.Stop();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            m_objProcfile.Stop();
+            Application.Exit();
+        }
     }
 }

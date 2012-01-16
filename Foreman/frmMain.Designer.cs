@@ -34,6 +34,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dlgOpenProcfile = new System.Windows.Forms.OpenFileDialog();
             this.txtConsole = new System.Windows.Forms.RichTextBox();
+            this.stopStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openProcfileToolStripMenuItem,
+            this.stopStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -68,6 +70,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // dlgOpenProcfile
             // 
@@ -83,6 +86,13 @@
             this.txtConsole.Size = new System.Drawing.Size(781, 471);
             this.txtConsole.TabIndex = 2;
             this.txtConsole.Text = "";
+            // 
+            // stopStripMenuItem
+            // 
+            this.stopStripMenuItem.Name = "stopStripMenuItem";
+            this.stopStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.stopStripMenuItem.Text = "Stop";
+            this.stopStripMenuItem.Click += new System.EventHandler(this.stopStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -109,6 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog dlgOpenProcfile;
         private System.Windows.Forms.RichTextBox txtConsole;
+        private System.Windows.Forms.ToolStripMenuItem stopStripMenuItem;
     }
 }
 

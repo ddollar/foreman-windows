@@ -17,6 +17,7 @@ namespace Foreman
         public frmMain()
         {
             InitializeComponent();
+            this.FormClosing += (s,e) => m_objProcfile.Stop();
         }
 
         private void openProcfileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,12 +78,19 @@ namespace Foreman
 
         private void stopStripMenuItem_Click(object sender, EventArgs e)
         {
-            m_objProcfile.Stop();
+            if (m_objProcfile != null)
+            {
+                m_objProcfile.Stop();
+            }
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            m_objProcfile.Stop();
+            if (m_objProcfile != null)
+            {
+                m_objProcfile.Stop();
+            }
+
             Application.Exit();
         }
     }

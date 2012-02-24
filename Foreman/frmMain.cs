@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Foreman
 {
@@ -18,6 +19,12 @@ namespace Foreman
         {
             InitializeComponent();
             this.FormClosing += (s,e) => m_objProcfile.Stop();
+
+            string[] args = Environment.GetCommandLineArgs();
+            if (args.Length > 1 && File.Exists(args[1]))
+                OpenProcfile(args[1]);
+            else if (File.Exists("Procfile"))
+                OpenProcfile("Procfile");
         }
 
         private void openProcfileToolStripMenuItem_Click(object sender, EventArgs e)
